@@ -14,9 +14,9 @@ function incCount(){
  counter++;
 }
 
-console.log("Should pass the basic test case: ", repeat(incCount, 4) === 4);
-counter=0;
-console.log("Should pass the base test case: ", repeat(incCount, 0) === 0);
-counter=0;
-console.log("Should pass the fail test case: ", repeat(incCount, -4) === null);
-// module.exports = repeat;
+// console.log("Should pass the basic test case: ", repeat(incCount, 4) === 4);
+// counter=0;
+// console.log("Should pass the base test case: ", repeat(incCount, 0) === 0);
+// counter=0;
+// console.log("Should pass the fail test case: ", repeat(incCount, -4) === null);
+module.exports = repeat;
