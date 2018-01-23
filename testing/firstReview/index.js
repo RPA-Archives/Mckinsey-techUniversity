@@ -30,7 +30,7 @@ const bowling = (inputArray) => {
   let counter = 0;
   let binding = null;
   return inputArray.reduce((AccumilatedScore, eachRoll) => {
-    console.log(eachRoll, AccumilatedScore);
+    // console.log(eachRoll, AccumilatedScore);
     let eachSum = 0;
     if (counter) {
       eachSum = eachRoll;
@@ -39,18 +39,18 @@ const bowling = (inputArray) => {
     if (eachRoll === 10) {
       counter += 2;
       eachSum += 10;
-      console.log('got one strike');
+      // console.log('got one strike');
     } else if (binding === null) {
       binding = calculateSum.bind(null, eachRoll);
-      console.log('Called Bind', binding);
+      // console.log('Called Bind', binding);
     } else {
       const resultedSum = binding(eachRoll);
-      console.log('binded sum', resultedSum);
+      // console.log('binded sum', resultedSum);
       if (resultedSum === 10) {
-        console.log('got one spare');
+        // console.log('got one spare');
         counter += 1;
       }
-      console.log('got one normal');
+      // console.log('got one normal');
       eachSum += resultedSum;
       binding = null;
     }
