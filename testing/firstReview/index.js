@@ -1,8 +1,15 @@
-const bowling = (inputArray) => {
-  validateInput(inputArray);
-  // inputArray.reduce((AccumilatedScore, eachRoll) => {
-  //   if(each)
-  // })
+
+const wrongWayToCalculate = (inputArray) => {
+  for (let i = 0; i < inputArray.length; i += 1) {
+    if (inputArray[i] === 10) {
+      continue;
+    } else if (inputArray[i] + inputArray[i + 1] > 11) {
+      return false;
+    } else {
+      i += 1;
+    }
+  }
+  return true;
 };
 
 const validateInput = (inputArray) => {
@@ -17,18 +24,41 @@ const validateInput = (inputArray) => {
   });
   return particalResult && wrongWayToCalculate(inputArray);
 };
+const calculateSum = (firstNum, SecondNum) => firstNum + SecondNum;
 
-const wrongWayToCalculate = (inputArray) => {
-  let i = 0;
-  for (; i < inputArray.length; i += 1) {
-    if (inputArray[i] === 10) {
-      continue;
-    } else if (inputArray[i] + inputArray[i + 1] > 11) {
-      return false;
-    } else {
-      i += 1;
+const bowling = (inputArray) => {
+  // validateInput(inputArray);
+  let counter = 0;
+  let binding = null;
+  return inputArray.reduce((eachRoll) => {
+    console.log(eachRoll, AccumilatedScore);
+    let eachSum = 0;
+    if (counter) {
+      eachSum = eachRoll;
+      counter -= 1;
     }
-  }
-  return true;
+    if (eachRoll === 10) {
+      counter += 2;
+      eachSum += 10;
+      console.log('got one strike');
+    } else if (binding === null) {
+      binding = calculateSum.bind(null, eachRoll);
+      console.log('Called Bind', binding);
+    } else {
+      const resultedSum = binding(eachRoll);
+      console.log('binded sum', resultedSum);
+      if (resultedSum === 10) {
+        console.log('got one spare');
+        counter += 1;
+      }
+      console.log('got one normal');
+      eachSum += resultedSum;
+      binding = null;
+    }
+    return AccumilatedScore + eachSum;
+  }), 0;
 };
-module.exports = validateInput;
+module.exports = {
+  bowling,
+  validateInput,
+};
