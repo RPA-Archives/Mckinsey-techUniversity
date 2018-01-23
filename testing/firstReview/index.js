@@ -1,4 +1,3 @@
-
 const wrongWayToCalculate = (inputArray) => {
   for (let i = 0; i < inputArray.length; i += 1) {
     if (inputArray[i] === 10) {
@@ -30,7 +29,7 @@ const bowling = (inputArray) => {
   // validateInput(inputArray);
   let counter = 0;
   let binding = null;
-  return inputArray.reduce((eachRoll) => {
+  return inputArray.reduce((AccumilatedScore, eachRoll) => {
     console.log(eachRoll, AccumilatedScore);
     let eachSum = 0;
     if (counter) {
@@ -56,7 +55,7 @@ const bowling = (inputArray) => {
       binding = null;
     }
     return AccumilatedScore + eachSum;
-  }), 0;
+  });
 };
 module.exports = {
   bowling,

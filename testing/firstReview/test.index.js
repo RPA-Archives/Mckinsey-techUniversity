@@ -35,15 +35,7 @@ describe('For Testing Bowling Function', () => {
     expect(bowling([10, 5, 5, 5, 4])).toBe(44);
   });
 
-  // test('Should pass all strike test case', () => {
-  //   expect(bowling([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10])).toBe(300);
-  // });
-  //
-  // test('Should pass valid test case', () => {
-  //   expect(bowling([10, 5, 5, 5, 4])).toBe(44);
-  // });
-  //
-  // test('SHould pass valid test case', () => {
-  //   expect(bowling([10, 5, 5, 5, 4])).toBe(44);
-  // });
+  test('Should pass all strike test case', () => {
+    expect(bowling([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10])).toBe(300);
+  });
 });
