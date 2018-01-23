@@ -26,7 +26,7 @@ const validateInput = (inputArray) => {
 const calculateSum = (firstNum, SecondNum) => firstNum + SecondNum;
 
 const bowling = (inputArray) => {
-  // validateInput(inputArray);
+  validateInput(inputArray);
   let counter = 0;
   let binding = null;
   return inputArray.reduce((AccumilatedScore, eachRoll) => {
