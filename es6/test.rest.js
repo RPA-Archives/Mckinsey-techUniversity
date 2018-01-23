@@ -1,4 +1,4 @@
-const average = require('./q7.js');
+const average = require('./rest.js');
 
 test('should give average of 1, 5 as 3', function () {
   expect(average(1, 5)).toBe(3);

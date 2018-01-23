@@ -1,4 +1,4 @@
-const greet = require('./que3.js');
+const greet = require('./arrowFunction1.js');
 
 test('Should print ', function () {
   expect(greet('Ram')).toBe(`Hello, Ram!

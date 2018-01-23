@@ -1,4 +1,4 @@
-const makeImportant = require('./q9.js');
+const makeImportant = require('./defaultArg2.js');
 
 test('should add length equal ! to hi', function () {
   expect(makeImportant('hi')).toBe('hi!!');

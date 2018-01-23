@@ -1,4 +1,4 @@
-const spread = require('./q6.js');
+const spread = require('./spread.js');
 
 test('spread should return a number', () => {
   expect(typeof spread([1, 4])).toBe('number');

@@ -1,4 +1,4 @@
-const greet = require('./que2.js');
+const greet = require('./templateString.js');
 // console.log(greet('prasad'))
 test('Should print simple stirng ', function () {
   expect(greet('Ram')).toBe(`Hello, Ram!

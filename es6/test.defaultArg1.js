@@ -1,4 +1,4 @@
-const midpoint = require('./q8.js');
+const midpoint = require('./defaultArg1.js');
 
 test('should give average of 1, 5 as 3', function () {
   expect(midpoint(1, 5)).toBe(3);

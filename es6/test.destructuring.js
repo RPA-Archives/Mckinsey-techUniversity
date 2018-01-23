@@ -1,4 +1,4 @@
-const fn = require('./q5.js');
+const fn = require('./destructuring.js');
 
 test("The expected value is { username: Ram, email: example@someone.com }", () => {
   expect(fn(['Abcd', 'Ram', 'example@someone.com', '23', 'Ram', 'Prasad'])).toBe({ username: 'Ram', email: 'example@someone.com' });
