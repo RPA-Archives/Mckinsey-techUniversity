@@ -1,0 +1,4 @@
+hello world
+this is sample file
+this will be used for counting newline in file
+answer should be 3
